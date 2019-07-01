@@ -25,7 +25,6 @@ selecteddata <- data %>% select(subject, code, contains("mean"), contains("std")
 selecteddata$code <- activities[selecteddata$code, 2]
 
 #labels the data set with descriptive variable names
-gsub("BodyBody", "Body", selecteddata)
 names(selecteddata) <- gsub("BodyBody", "Body", names(selecteddata))
 names(selecteddata)<-gsub("^t", "Time", names(selecteddata))
 names(selecteddata)<-gsub("^f", "Frequency", names(selecteddata))
